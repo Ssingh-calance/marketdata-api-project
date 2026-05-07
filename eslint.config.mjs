@@ -6,7 +6,11 @@ export default [
     ignores: [
       'lib/connection/snapshots/quotes/retrieveSnapshots.js',
       'example/browser/js/**',
+      'node_modules/**',
+      'docs/**',
     ],
+  },
+  {
     languageOptions: {
       globals: {
         require: 'readonly',
@@ -15,6 +19,13 @@ export default [
         __dirname: 'readonly',
         __filename: 'readonly',
         process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -36,33 +47,26 @@ export default [
     },
   },
   {
-    files: ['example/browser/*.js'],
+    files: ['example/browser/**/*.js', 'lib/environment/EnvironmentForBrowsers.js', 'lib/connection/adapter/WebSocketAdapterFactoryForBrowsers.js', 'lib/utilities/xml/XmlParserFactoryForBrowsers.js'],
     languageOptions: {
       globals: {
         ko: 'readonly',
         toastr: 'readonly',
         u: 'readonly',
         Barchart: 'readonly',
-      },
-    },
-  },
-  {
-    files: ['lib/utilities/xml/XmlParserFactoryForBrowsers.js'],
-    languageOptions: {
-      globals: {
         DOMParser: 'readonly',
-      },
-    },
-  },
-  {
-    files: ['scripts/**/*.js'],
-    languageOptions: {
-      globals: {
-        console: 'readonly',
-        setTimeout: 'readonly',
-        clearInterval: 'readonly',
-        setInterval: 'readonly',
-        Buffer: 'readonly',
+        window: 'readonly',
+        self: 'readonly',
+        WebSocket: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        XMLHttpRequest: 'readonly',
+        FormData: 'readonly',
+        URLSearchParams: 'readonly',
+        btoa: 'readonly',
+        Intl: 'readonly',
+        define: 'readonly',
+        $: 'readonly',
       },
     },
   },
