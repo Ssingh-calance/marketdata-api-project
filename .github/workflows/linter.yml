@@ -2,9 +2,9 @@ name: Lint Code
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
   eslint:
@@ -20,7 +20,11 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd marketdata-api-project
+          npm install --legacy-peer-deps
 
       - name: Run Linter
-        run: npx eslint lib/connection/snapshots/quotes/retrieveSnapshots.js
+        run: |
+          cd marketdata-api-project
+          npx eslint .
