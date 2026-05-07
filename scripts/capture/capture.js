@@ -18,8 +18,8 @@ const LoggerFactory = require('./../../lib/logging/LoggerFactory');
 
   __logger.log(`Example: Node.js capture script started, SDK version [ ${version} ]`);
 
-  let connection = null;
-  let adapterFactory = null;
+  let connection;
+  let adapterFactory;
 
   process.on('SIGINT', () => {
     __logger.log('Example: Processing SIGINT');
