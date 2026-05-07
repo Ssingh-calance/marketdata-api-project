@@ -5,6 +5,7 @@ export default [
   {
     ignores: [
       'lib/connection/snapshots/quotes/retrieveSnapshots.js',
+      'example/browser/example.js',
       'example/browser/js/**',
       'node_modules/**',
       'docs/**',
