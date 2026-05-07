@@ -20,11 +20,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: |
-          cd marketdata-api-project
-          npm install --legacy-peer-deps
+        run: npm install
 
       - name: Run Linter
-        run: |
-          cd marketdata-api-project
-          npx eslint .
+        run: npx eslint .
