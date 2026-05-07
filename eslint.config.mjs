@@ -5,6 +5,7 @@ export default [
   {
     ignores: [
       'lib/connection/snapshots/quotes/retrieveSnapshots.js',
+      'example/browser/js/**',
     ],
     languageOptions: {
       globals: {
@@ -18,6 +19,50 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'script',
+      },
+    },
+  },
+  {
+    files: ['test/**/*.js'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        jasmine: 'readonly',
+      },
+    },
+  },
+  {
+    files: ['example/browser/*.js'],
+    languageOptions: {
+      globals: {
+        ko: 'readonly',
+        toastr: 'readonly',
+        u: 'readonly',
+        Barchart: 'readonly',
+      },
+    },
+  },
+  {
+    files: ['lib/utilities/xml/XmlParserFactoryForBrowsers.js'],
+    languageOptions: {
+      globals: {
+        DOMParser: 'readonly',
+      },
+    },
+  },
+  {
+    files: ['scripts/**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearInterval: 'readonly',
+        setInterval: 'readonly',
+        Buffer: 'readonly',
       },
     },
   },
