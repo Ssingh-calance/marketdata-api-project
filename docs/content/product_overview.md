@@ -40,7 +40,7 @@ Sometimes referred to as "top of book," this subscription will provide the most 
 
 **Level II Data**
 
-Sometimes referred to as "market depth," this subscription will aggregate open, unfilled orders on both sides of the market. In other words, this subscription provides the total quantity available for purchase (or sale) at various price points.
+Sometimes referred to as "market depth," this subscription will aggregate open, unfilled orders on both sides of the market. In other words, this subscription provides the total quantity available for purchase (or sale) at letious price points.
 
 **Cumulative Volume Data**
 

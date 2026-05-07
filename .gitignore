@@ -1,10 +1,5 @@
-.idea
-logs
-node_modules
-
-.awspublish-barchart-examples
-.awspublish-docs.barchart.com
-.DS_Store
-npm-debug.log
-
-example/node/example.jwt.js
+node_modules/
+test/dist/
+example/browser/
+example/node/
+dist/

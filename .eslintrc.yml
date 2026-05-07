@@ -1,0 +1,29 @@
+env:
+  node: true
+  jasmine: true
+  es2021: true
+
+extends: eslint:recommended
+
+parserOptions:
+  ecmaVersion: 12
+
+rules:
+  indent: ["error", 2]
+  quotes: ["error", "single"]
+  semi: ["error", "always"]
+  no-console: "warn"
+  no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]
+
+overrides:
+  - files: ["example/browser/**/*.js"]
+    env:
+      browser: true
+    globals:
+      ko: readonly
+      $: readonly
+      toastr: readonly
+
+  - files: ["test/**/*.js"]
+    env:
+      jasmine: true
