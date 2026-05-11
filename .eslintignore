@@ -1,9 +1,0 @@
-# Ignore build outputs
-dist/
-test/dist/
-
-# Ignore browser bundles
-example/browser/
-
-# Ignore any generated files
-**/*.bundle.js

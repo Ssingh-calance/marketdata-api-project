@@ -62,7 +62,7 @@ const LoggerFactory = require('./../../lib/logging/LoggerFactory');
     symbols.split(',').forEach((s) => {
       let price = null;
 
-      const handleMarketUpdate = (message) => {
+      const handleMarketUpdate = () => {
         const current = connection.getMarketState().getQuote(s).lastPrice;
 
         if (price !== current) {

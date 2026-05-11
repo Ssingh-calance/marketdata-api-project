@@ -2,13 +2,7 @@ const parseMessage = require('../../../../../lib/utilities/parse/ddf/message');
 
 const XmlParserFactoryForNode = require('./../../../../../lib/utilities/xml/XmlParserFactoryForNode');
 
-function translateCaretControlCharacters(message) {
-  return message.replace(/\^A/g, '\x01')
-    .replace(/\^B/g, '\x02')
-    .replace(/\^C/g, '\x03')
-    .replace(/\^D/g, '\x04')
-    .replace(/\^T/g, '\x20');
-}
+
 
 /*
 describe('when parsing ad hoc DDF messages', () => {

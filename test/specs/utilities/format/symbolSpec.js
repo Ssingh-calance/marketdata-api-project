@@ -1,11 +1,10 @@
 const formatSymbol = require('./../../../../lib/utilities/format/symbol');
 
 describe('When a lowercase string is formatted as a symbol', () => {
-  let originalSymbol;
   let formattedSymbol;
 
   beforeEach(() => {
-    formattedSymbol = formatSymbol(originalSymbol = 'aapl');
+    formattedSymbol = formatSymbol('aapl');
   });
 
   it('The result should only contain uppercase letters', () => {
@@ -14,11 +13,10 @@ describe('When a lowercase string is formatted as a symbol', () => {
 });
 
 describe('When an uppercase string is formatted as a symbol', () => {
-  let originalSymbol;
   let formattedSymbol;
 
   beforeEach(() => {
-    formattedSymbol = formatSymbol(originalSymbol = 'AAPL');
+    formattedSymbol = formatSymbol('AAPL');
   });
 
   it('The result should only contain uppercase letters', () => {
@@ -27,11 +25,10 @@ describe('When an uppercase string is formatted as a symbol', () => {
 });
 
 describe('When a mixed case string is formatted as a symbol', () => {
-  let originalSymbol;
   let formattedSymbol;
 
   beforeEach(() => {
-    formattedSymbol = formatSymbol(originalSymbol = 'aApL');
+    formattedSymbol = formatSymbol('aApL');
   });
 
   it('The result should only contain uppercase letters', () => {
@@ -53,11 +50,10 @@ describe('When a zero-length string is formatted as a symbol', () => {
 });
 
 describe('When a string with numbers is formatted as a symbol', () => {
-  let originalSymbol;
   let formattedSymbol;
 
   beforeEach(() => {
-    formattedSymbol = formatSymbol(originalSymbol = 'esm16');
+    formattedSymbol = formatSymbol('esm16');
   });
 
   it('The result should only contain uppercase letters', () => {
@@ -83,11 +79,10 @@ describe('When a number is formatted as a symbol', () => {
 });
 
 describe('When an undefined value is formatted as a symbol', () => {
-  let originalSymbol;
   let formattedSymbol;
 
   beforeEach(() => {
-    formattedSymbol = formatSymbol(originalSymbol = undefined);
+    formattedSymbol = formatSymbol(undefined);
   });
 
   it('The result should be a undefined', () => {
@@ -96,11 +91,10 @@ describe('When an undefined value is formatted as a symbol', () => {
 });
 
 describe('When an null value is formatted', () => {
-  let originalSymbol;
   let formattedSymbol;
 
   beforeEach(() => {
-    formattedSymbol = formatSymbol(originalSymbol = null);
+    formattedSymbol = formatSymbol(null);
   });
 
   it('The result should be null', () => {

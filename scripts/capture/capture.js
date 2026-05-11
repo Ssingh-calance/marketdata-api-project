@@ -19,7 +19,6 @@ const LoggerFactory = require('./../../lib/logging/LoggerFactory');
   __logger.log(`Example: Node.js capture script started, SDK version [ ${version} ]`);
 
   let connection = null;
-  let adapterFactory = null;
 
   process.on('SIGINT', () => {
     __logger.log('Example: Processing SIGINT');
@@ -51,7 +50,7 @@ const LoggerFactory = require('./../../lib/logging/LoggerFactory');
   __logger.log(`Example: Instantiating Connection (using Node.js adapter) for [ ${username}/${password} ] @ [ ${host} ]`);
 
   connection = new Connection();
-  adapterFactory = new WebSocketAdapterFactoryForNode();
+  const adapterFactory = new WebSocketAdapterFactoryForNode();
 
   connection.connect(host, username, password, adapterFactory);
 
